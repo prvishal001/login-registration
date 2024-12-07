@@ -13,7 +13,10 @@ app.use(express.json());
 
 // User Routes
 app.use('/api/users', userRoutes);
-
+app.get('/', (req, res) => {
+    res.send('Backend is running!');
+  });
+  
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)
