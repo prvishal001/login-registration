@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://login-registration-eight.vercel.app/api/users/login', formData);
+      const res = await axios.post('https://login-registration-psi.vercel.app/api/users/login', formData);
       setMessage({ text: `Login successful!`, type: 'success' });
       
       // Store the actual token received from the server
