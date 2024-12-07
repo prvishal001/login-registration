@@ -10,7 +10,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://login-registration-psi.vercel.app/api/users/register', formData);
+      const res = await axios.post('https://login-registration-eight.vercel.app/api/users/register', formData);
       setMessage({ text: res.data.message, type: 'success' });
     } catch (error) {
       setMessage({ text: error.response?.data?.message || 'Registration failed', type: 'error' });

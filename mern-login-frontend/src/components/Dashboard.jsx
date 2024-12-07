@@ -21,7 +21,7 @@ const Dashboard = () => {
     } else {
       // Fetch user details from the backend (MongoDB data)
       axios
-        .get('https://login-registration-psi.vercel.app/api/users/me', {
+        .get('https://login-registration-eight.vercel.app/api/users/me', {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
