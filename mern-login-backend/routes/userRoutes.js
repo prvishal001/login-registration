@@ -36,15 +36,15 @@ router.post('/login', async (req, res) => {
     // Find the user by email
     const user = await User.findOne({ email });
     if (!user || user.password !== password) {
-      return res.status(400).json({ message: 'Invalid credentials' });
+      return res.status(400).json({ message: 'Invalid credentials hai' });
     }
 
     // Create JWT token
     const token = jwt.sign({ id: user._id, name: user.name }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-    res.status(200).json({ message: 'Login successful', token });
+    res.status(200).json({ message: 'Login successful ho gya', token });
   } catch (error) {
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ message: 'Server error hai' });
   }
 });
 
